@@ -48,7 +48,6 @@ function showOnlyVideos(posts){
 		this.posts = data.data;
 	}
 	toggleVideos = !toggleVideos;
-	// return posts;
 }
 
 vuegramMethods.showOnlyVideos = showOnlyVideos;
