@@ -7,7 +7,7 @@ function init_get_callback(data){
 	    posts: res
 	  },
 	  methods: {
-	  	
+	  	viewPostDetails:viewPostDetailsFunc
 	  }
 	});
 }
