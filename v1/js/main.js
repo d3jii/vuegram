@@ -15,10 +15,6 @@ var url = get_ajax_url(496970788);
 
 new Vue({
 	  el: '#vuegramapp',
-	  data: {
-	    posts: data.data
-	  },
-	  methods: {
-	  	viewPostDetails:viewPostDetailsFunc
-	  }
+	  data: vuegramData,
+	  methods:vuegramMethods
 	});

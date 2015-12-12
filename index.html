@@ -7,6 +7,10 @@
 	<div class="vuegram-post" v-for="post in posts">
 		{{post.user.username}} 
 		<button v-on:click="viewPostDetails(post)"> View Post Details </button>
+		<div style="dispaly:none" v-for="like in post.likes.data">
+			{{updateLikers(like,post)}}
+		</div>
+		{{post.has_fullname = post.user.fullname != ""}}
 		<!-- <img src="{{post.images.standard_resolution.url}}" /> -->
 		<img v-bind:src="post.images.thumbnail.url" />
 	</div>
