@@ -13,12 +13,14 @@
 		<div style="display:none" v-for="comment in post.comments.data">
 			{{updateCommenters(comment,post)}}
 		</div>
-		{{post.has_fullname = post.user.fullname != ""}}
+		{{{emojiParse(post.caption.text)}}}
+		{{post.comments.count}}
 		<!-- <img src="{{post.images.standard_resolution.url}}" /> -->
 		<img v-bind:src="post.images.thumbnail.url" />
 	</div>
 </div>
 <script src="v1/vendor/jq.js"></script>
+<script src="v1/vendor/twemoj.js"></script>
 <script src="v1/js/geturl.js"></script>
 <script src="v1/vendor/vue.js"></script>
 <script type="text/javascript" src="v1/extras/data.js"></script>

@@ -5,5 +5,5 @@ var vuegramData = {
 	    commenters:{}
 };
 var vuegramMethods = {
-
+	emojiParse : twemoji.parse
 };
