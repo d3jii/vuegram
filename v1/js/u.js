@@ -1,24 +1,41 @@
+var toggleStatusComments = true;
+var toggleStatusLikes = true;
+
 function sortBy(posts, arg){
 	if(arg == "comments"){
-		if(vugramData.toggleStatusLikes == true){
+		if(toggleStatusComments == true){
+			posts.sort(function(a, b){
+			 return b.comments.count - a.comments.count;
+			});
+		}
+		else{
 			posts.sort(function(a, b){
 			 return a.comments.count - b.comments.count;
 			});
-			vugramData.toggleStatusLikes = false;
 		}
+		toggleStatusComments = !toggleStatusComments;
 		
 	}
 
 	if(arg == "likes"){
-		posts.sort(function(a, b){
+		if(toggleStatusLikes == true){
+			posts.sort(function(a, b){
+			 return b.likes.count - a.likes.count;
+			});
+		}
+		else{
+			posts.sort(function(a, b){
 			 return a.likes.count - b.likes.count;
-		});
+			});
+		}
+		toggleStatusLikes = !toggleStatusLikes;
+		
 	}
-
+	
 	return posts;
 }
 
 vuegramMethods.sortBy = sortBy;
-vugramData.toggleStatusComments = true;
-vugramData.toggleStatusLikes = true;
+// vuegramData.toggleStatusComments = toggleStatusComments;
+// vuegramData.toggleStatusLikes = toggleStatusLikes;
 
