@@ -1,0 +1,19 @@
+{
+  "name": "",
+  "version": "0.0.0",
+  "authors": [
+    "Aj Dev <ahero@heroku.com>"
+  ],
+  "description": "n/a",
+  "main": "app.js",
+  "keywords": [
+    "Twitter"
+  ],
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "fontawesome": "~4.4.0",
+    "bootstrap": "~3.3.5"
+  }
+}
