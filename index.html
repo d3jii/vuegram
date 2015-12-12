@@ -4,9 +4,12 @@
 </head>
 <body>
 	<style type="text/css">
-	.none{
-		display: none;
-	}
+	img.emoji{
+    	height: 1em;
+	   width: 1em;
+	   margin: 0 .05em 0 .1em;
+	   vertical-align: -0.1em;
+    }
 	</style>
 <div id="vuegramapp">
 <button v-on:click="sortBy(posts,'comments')">Sort By Comments</button> 
@@ -33,6 +36,7 @@
 		{{post.comments.count}}
 		<!-- <img src="{{post.images.standard_resolution.url}}" /> -->
 		<img v-bind:src="post.images.thumbnail.url" />
+		<a href="{{getDownloadLink(post)}}">Download</a>
 	</div>
 </div>
 <script src="v1/vendor/jq.js"></script>

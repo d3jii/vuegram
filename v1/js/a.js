@@ -52,9 +52,16 @@ function updatePostTagsFunc(tag,post){
 	console.log(this.tags);
 }
 
+function getDownloadLinkFunc(post){
+	if(post.type == 'video')
+		return post.videos.standard_resolution.url;
+
+	return post.images.standard_resolution.url;
+}
 vuegramMethods.viewPostDetails = viewPostDetailsFunc;
 vuegramMethods.updateLikers = updateLikersFunc;
 vuegramMethods.updateCommenters = updateCommentersFunc;
 vuegramMethods.updateTaggedUsers = updateTaggedUsersFunc;
 vuegramMethods.updatePostTags = updatePostTagsFunc;
+vuegramMethods.getDownloadLink = getDownloadLinkFunc;
 
