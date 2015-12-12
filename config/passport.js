@@ -30,6 +30,19 @@ module.exports = function(passport) {
         });
     });
 
+
+    passport.use(new InstagramStrategy({
+    clientID: configAuth.clientID,
+    clientSecret:  configAuth.clientSecret,
+    callbackURL: configAuth.callbackURL
+  },
+  function(accessToken, refreshToken, profile, done) {
+    User.findOrCreate({ instagramId: profile.id }, function (err, user) {
+      return done(err, user);
+    });
+  }
+));
+
     // =========================================================================
     // LOCAL SIGNUP ============================================================
     // =========================================================================
