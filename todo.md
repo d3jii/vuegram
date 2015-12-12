@@ -7,10 +7,10 @@
 - Download media to pc [A]
 
 BackEnd
-- User sign in
-- Setup passport for local and instagram
-- add up to four instagram accounts
+- User sign in 
+- Setup passport for local and instagram [A]
+- Pull media for timelines [User timeline / Profile] [U]
+- add up to four instagram accounts 
 - Remove instagram account
 - Switch accounts
-- Add / Remove user to / from custom timeline [Max of 10 users per 
-- custom timeline - Max of 10 custom timelines per user]
+- Add / Remove user to / from custom timeline [Max of 10 users per custom timeline - Max of 10 custom timelines per user]
