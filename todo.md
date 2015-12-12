@@ -1,0 +1,8 @@
+- Load user timeline [profile id / username] [A]
+- Sort posts by comments and likes [U]
+- Toggle show only videos [U]
+- View all commenters / likers (and media they liked) on a page [A]
+- View all tags used on a page [A]
+- View all persons tagged on a page [U]
+- Download media to pc [A]
+- Add user to custom timeline [U]
