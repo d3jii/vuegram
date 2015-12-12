@@ -1,5 +1,6 @@
 var toggleStatusComments = true;
 var toggleStatusLikes = true;
+var toggleVideos = true;
 
 function sortBy(posts, arg){
 	if(arg == "comments"){
@@ -37,10 +38,18 @@ function sortBy(posts, arg){
 
 function showOnlyVideos(posts){
 
-	posts = posts.filter(post){
-		return post.type.match(/video/);
+	if(toggleVideos == true){
+		posts = posts.filter(function(post){
+			return post.type.match(/video/);
+		});
+		this.posts = posts;
 	}
-	return posts;
+	else{
+		this.posts = data.data;
+	}
+	toggleVideos = !toggleVideos;
+	// return posts;
 }
 
+vuegramMethods.showOnlyVideos = showOnlyVideos;
 vuegramMethods.sortBy = sortBy;
