@@ -10,7 +10,7 @@ function routeHandler(app,passport){
 
 
 
-	
+
 	app.get('/signup', function(req, res) { 
         res.render('signup.ejs', { message: req.flash('signupMessage') });
     });
@@ -35,5 +35,16 @@ function routeHandler(app,passport){
         failureRedirect : '/login', // redirect back to the signup page if there is an error
         failureFlash : true // allow flash messages
     }));
+
+
+    app.get('/auth/instagram',
+  passport.authenticate('instagram'));
+
+app.get('/auth/instagram/callback', 
+  passport.authenticate('instagram', { failureRedirect: '/login' }),
+  function(req, res) {
+    // Successful authentication, redirect home.
+    res.redirect('/');
+  });
 }
 module.exports = routeHandler;
