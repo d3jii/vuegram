@@ -11,9 +11,15 @@ function updateLikersFunc(like,post){
 
  this.likers[un].count++;
  this.likers[un].images.push(post.images);
- console.log(this.likers);
+ //console.log(this.likers);
 
 }
 
-vuegramMethods.updateLikers = updateLikersFunc;
+function updateCommentersFunc(comment,post){
+	 
+}
+
 vuegramMethods.viewPostDetails = viewPostDetailsFunc;
+vuegramMethods.updateLikers = updateLikersFunc;
+vuegramMethods.updateCommenters = updateCommentersFunc;
+
