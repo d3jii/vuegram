@@ -5,6 +5,9 @@ function init_get_callback(data){
 	  el: '#vuegramapp',
 	  data: {
 	    posts: res
+	  },
+	  methods: {
+	  	
 	  }
 	});
 }
