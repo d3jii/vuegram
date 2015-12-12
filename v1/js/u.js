@@ -1,5 +1,6 @@
 var toggleStatusComments = true;
 var toggleStatusLikes = true;
+var toggleVideos = true;
 
 function sortBy(posts, arg){
 	if(arg == "comments"){
@@ -35,7 +36,20 @@ function sortBy(posts, arg){
 	return posts;
 }
 
-vuegramMethods.sortBy = sortBy;
-// vuegramData.toggleStatusComments = toggleStatusComments;
-// vuegramData.toggleStatusLikes = toggleStatusLikes;
+function showOnlyVideos(posts){
 
+	if(toggleVideos == true){
+		posts = posts.filter(function(post){
+			return post.type.match(/video/);
+		});
+		this.posts = posts;
+	}
+	else{
+		this.posts = data.data;
+	}
+	toggleVideos = !toggleVideos;
+	// return posts;
+}
+
+vuegramMethods.showOnlyVideos = showOnlyVideos;
+vuegramMethods.sortBy = sortBy;

@@ -16,5 +16,5 @@ var url = get_ajax_url(496970788);
 new Vue({
 	  el: '#vuegramapp',
 	  data: vuegramData,
-	  methods:vuegramMethods
+	  methods: vuegramMethods
 	});

@@ -9,8 +9,9 @@
 	}
 	</style>
 <div id="vuegramapp">
-<button v-on:click="sortBy(posts,'comments')">Sort By Comments</button>
-<button v-on:click="sortBy(posts,'likes')">Sort By Likes</button> 
+<button v-on:click="sortBy(posts,'comments')">Sort By Comments</button> 
+<button v-on:click="sortBy(posts,'likes')">Sort By Likes</button>
+<button v-on:click="showOnlyVideos(posts)">videos</button> 
 	<div class="vuegram-post" v-for="post in posts">
 		{{post.user.username}} 
 		<button v-on:click="viewPostDetails(post)"> View Post Details </button>
@@ -27,7 +28,6 @@
 		<div style="display:none" v-for="tag in post.tags">
 			{{updatePostTags(tag,post)}}
 		</div>
-
 
 		{{{post.caption ? emojiParse(post.caption.text) : ""}}}
 		{{post.comments.count}}
