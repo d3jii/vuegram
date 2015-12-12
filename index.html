@@ -5,7 +5,8 @@
 <body>
 <div id="vuegramapp">
 	<div class="vuegram-post" v-for="post in posts">
-		{{post.user.username}}
+		{{post.user.username}} 
+		<button v-on:click="viewPostDetails"> View Post Details </button>
 		<!-- <img src="{{post.images.standard_resolution.url}}" /> -->
 		<img src="{{post.images.thumbnail.url}}" />
 	</div>
