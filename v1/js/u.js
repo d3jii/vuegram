@@ -35,7 +35,12 @@ function sortBy(posts, arg){
 	return posts;
 }
 
-vuegramMethods.sortBy = sortBy;
-// vuegramData.toggleStatusComments = toggleStatusComments;
-// vuegramData.toggleStatusLikes = toggleStatusLikes;
+function showOnlyVideos(posts){
 
+	posts = posts.filter(post){
+		return post.type.match(/video/);
+	}
+	return posts;
+}
+
+vuegramMethods.sortBy = sortBy;
