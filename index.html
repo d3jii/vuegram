@@ -4,6 +4,8 @@
 </head>
 <body>
 <div id="vuegramapp">
+<button v-on:click="sortBy(posts,'comments')">Sort By Comments</button>
+<button v-on:click="sortBy(posts,'likes')">Sort By Likes</button>
 	<div class="vuegram-post" v-for="post in posts">
 		{{post.user.username}} 
 		<button v-on:click="viewPostDetails(post)"> View Post Details </button>
