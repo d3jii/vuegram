@@ -34,7 +34,7 @@ module.exports = function(passport) {
     passport.use(new InstagramStrategy({
     clientID: configAuth.instagramAuth.clientID,
     clientSecret:  configAuth.instagramAuth.clientSecret,
-    callbackURL: configAuth.instagramAuth.callbackURL
+    callbackURL: configAuth.instagramAuth.callbackurl
   },
   function(accessToken, refreshToken, profile, done) {
     User.findOrCreate({ instagramId: profile.id }, function (err, user) {
