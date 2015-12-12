@@ -9,13 +9,17 @@
 	<div class="vuegram-post" v-for="post in posts">
 		{{post.user.username}} 
 		<button v-on:click="viewPostDetails(post)"> View Post Details </button>
+
 		<div style="display:none" v-for="like in post.likes.data">
 			{{updateLikers(like,post)}}
 		</div>
 		<div style="display:none" v-for="comment in post.comments.data">
 			{{updateCommenters(comment,post)}}
 		</div>
-		{{{emojiParse(post.caption.text)}}}
+		
+
+
+		{{{post.caption ? emojiParse(post.caption.text) : ""}}}
 		{{post.comments.count}}
 		<!-- <img src="{{post.images.standard_resolution.url}}" /> -->
 		<img v-bind:src="post.images.thumbnail.url" />
