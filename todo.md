@@ -5,4 +5,12 @@
 - View all tags used on a page [A]
 - View all persons tagged on a page [U]
 - Download media to pc [A]
-- Add user to custom timeline [U]
+
+BackEnd
+- User sign in
+- Setup passport for local and instagram
+- add up to four instagram accounts
+- Remove instagram account
+- Switch accounts
+- Add / Remove user to / from custom timeline [Max of 10 users per 
+- custom timeline - Max of 10 custom timelines per user]
