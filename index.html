@@ -6,14 +6,15 @@
 <div id="vuegramapp">
 	<div class="vuegram-post" v-for="post in posts">
 		{{post.user.username}} 
-		<button v-on:click="viewPostDetails"> View Post Details </button>
+		<button v-on:click="viewPostDetails(post)"> View Post Details </button>
 		<!-- <img src="{{post.images.standard_resolution.url}}" /> -->
-		<img src="{{post.images.thumbnail.url}}" />
+		<img v-bind:src="post.images.thumbnail.url" />
 	</div>
 </div>
 <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
 <script src="v1/js/geturl.js"></script>
 <script src="v1/vendor/vue.js"></script>
+<script type="text/javascript" src="v1/extras/data.js"></script>
 <script type="text/javascript" src="v1/js/u.js"></script>
 <script type="text/javascript" src="v1/js/a.js"></script>
 <script type="text/javascript" src="v1/js/main.js"></script>

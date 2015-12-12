@@ -1,3 +1,3 @@
-function viewPostDetailsFunc(){
-	console.log(this);
+function viewPostDetailsFunc(post){
+	console.table(post.user);
 }
