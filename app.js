@@ -44,13 +44,13 @@ app.use(function(req, res, next){
 
 // route middleware to make sure a user is logged in
 function isLoggedIn(req, res, next) {
-
-    // if user is authenticated in the session, carry on 
-    //if (req.isAuthenticated())
-        return next();
-
     // if they aren't redirect them to the home page
-    //res.redirect('/login');
+    if(req.path == "/login" || req.path == "/signup")
+        next();
+    else if(!req.isAuthenticated())
+    res.redirect('/login');
+    else
+        next();
 }
 
 /* Setup the App */

@@ -3,14 +3,6 @@ var u = require('../controllers/u');
 function routeHandler(app,passport){ 
 	app.route('/').get(a.index_handler);
 
-
-
-
-
-
-
-
-
 	app.get('/signup', function(req, res) { 
         res.render('signup.ejs', { message: req.flash('signupMessage') });
     });
