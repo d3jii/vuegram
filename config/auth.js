@@ -3,8 +3,8 @@
 // expose our config directly to our application using module.exports
 module.exports = { 
         'instagramAuth' : {
-        'clientID'       : '65ebd101623d42b0b44d4470310a1fb5',
-        'clientSecret'    : 'a201f0d016174cb4a0317a4ba035cd75', 
+        'clientID'       : '161450ba1bc842509a46cbdc5cee38e8',
+        'clientSecret'    : '16578aa0037242cdba3eb0c9895c1633', 
         'callbackurl':"http://127.0.0.1:9000/auth/instagram/callback"
     } 
 
