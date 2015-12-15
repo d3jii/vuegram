@@ -1,0 +1,79 @@
+*{
+    padding:0;
+    margin:0;
+}
+body{
+    font-family:Helvetica;
+    font-size:12px;
+}
+#vuegramapp{
+    width:70%;
+    margin:auto;
+    padding:20px;
+}
+#vuetrols,#vuetainer{
+    width:100%;
+    text-align:center;
+}
+#vuetrols > button{
+    width:150px;
+    padding:10px 0px;
+    border:1px solid #ccc;
+    border-radius:5px;
+    background:#1de;
+    color:white;
+    margin-right:10px;
+    cursor:pointer;
+}
+#vuetrols > button:active{
+    border:1px solid #1de;
+    border-radius:5px;
+    background:#ccc;
+    outline:none; 
+}
+#vuetrols > button:focus{ 
+    outline:none; 
+}
+
+.vuegram-post{ 
+    width:512px;
+    margin:30px auto;
+    border:1px solid #ccc;
+    padding:20px 10px;
+    border-radius:5px;
+}
+.vueserinfo{
+    width:100%;
+    text-align:left;
+    padding-bottom:3px;
+    font-size:14px;
+}
+.vuemage{
+    width:512px;
+    padding-bottom:10px
+}
+.vuemage img{
+    border-radius:4px;
+    width:100%;
+}
+.vuestats{
+    width:100%;
+    text-align:right;
+}
+.vuestats span{
+    padding:10px;
+}
+span i{   
+    color:#1de;
+}
+span a{
+    color:#1de;
+    text-decoration:none;
+}
+span a:hover{
+    color:#ed1;
+}
+.vueption{
+    text-align:left;
+    color:#666;
+}

@@ -34,11 +34,33 @@ module.exports = function(passport) {
     passport.use(new InstagramStrategy({
     clientID: configAuth.instagramAuth.clientID,
     clientSecret:  configAuth.instagramAuth.clientSecret,
-    callbackURL: configAuth.instagramAuth.callbackurl
+    callbackURL: configAuth.instagramAuth.callbackurl,
+    passReqToCallback : true
   },
-  function(accessToken, refreshToken, profile, done) {
-    User.findOrCreate({ instagramId: profile.id }, function (err, user) {
-      return done(err, user);
+  function(req,accessToken, refreshToken, profile, done) {
+    User.findOne({ 'instagram.token' : accessToken }, function (err, user) {
+         if(!user){
+
+            var user = req.user;
+
+            if(!user.instagram)
+            user.instagram = {};
+
+            user.instagram.token = accessToken;
+            function user_save_callback(err){
+                if(!err){
+                    return done(null,user)
+                }
+                else
+                    return done(err);
+            }
+            user.save(user_save_callback);            
+         }
+         else{
+            console.log(user);
+            return done(null,user);
+         } 
+         
     });
   }
 ));
